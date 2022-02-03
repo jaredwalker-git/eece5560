@@ -1,0 +1,16 @@
+<launch>
+
+<include file="eece5560/packages/mystery_package/launch/launch_mystery.launch"/>
+
+<group ns="first_ros_package">
+
+<node pkg="first_ros_package" name ="randnum" type="first_node.py"/>
+<node pkg="first_ros_package" name="subnode" type="subscribernode.py"/>
+
+<node pkg="rqt_graph" name="rqt_graph" type="rqt_graph" />
+
+<node pkg="rqt_console" name="rqt_console" type="rqt_console" />
+
+</group>
+
+</launch>
