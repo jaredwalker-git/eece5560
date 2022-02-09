@@ -1,6 +1,6 @@
 #!/bin/bash
 
-HW_PACKAGE="learning_ros"
+HW_PACKAGE="first_ros_package"
 HW_LAUNCH="hw3.launch"
 
 source /environment.sh
