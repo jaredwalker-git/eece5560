@@ -1,0 +1,19 @@
+<launch>
+
+  <group ns="first_ros_package">
+    <param name = "Units" type="string" value="smoots"/>
+    <node pkg="first_ros_package" name ="hw4node" type="hw4node.py"/>
+    <node pkg="first_ros_package" name ="randnum" type="first_node.py"/>
+  </group>
+  
+  <group ns="mystery">
+    <node pkg="mystery_package" name="mystery_node" type="mystery_node.py"/>
+    <remap from="/mystery/output2" to="/first_ros_package/unitconv"/>
+    <node pkg="mystery_package" name="unit_listener" type="unit_listener.py"/>
+  </group>
+  
+<node pkg="rostopic" name="rostopic" type="rostopic" output="screen" args="echo unitconv" />
+<node pkg="rqt_console" name="rqt_console" type="rqt_console" />
+<node pkg="rqt_graph" name="rqt_graph" type="rqt_graph" />
+
+</launch>
