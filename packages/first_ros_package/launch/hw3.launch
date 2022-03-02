@@ -1,14 +1,10 @@
 <launch>
 
-<include file="eece5560/packages/mystery_package/launch/launch_mystery.launch"/>
-
 	<group ns="first_ros_package">
 
-		<node pkg="first_ros_package" name ="hw3node" type="hw3node.py"/>
-
-		<node pkg="first_ros_package" name ="randnum" type="first_node.py"/>
+		<node pkg="first_ros_package" name ="hw5node" type="hw3node.py"/>
 		
-		<node pkg="rostopic" name="rostopic" type="rostopic" output="screen" args="echo meterstofeet" />
+		<node pkg = "rostopic" name = "world_coord" type = "rostopic" output = "screen" args = "echo /meterstofeet"/>
 		
 		<node pkg="rqt_console" name="rqt_console" type="rqt_console" />
 

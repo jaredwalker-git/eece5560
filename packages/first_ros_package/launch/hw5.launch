@@ -1,0 +1,17 @@
+<launch>
+
+	<group ns="first_ros_package">
+
+		<node pkg="first_ros_package" name ="hw5node" type="hw5node.py"/>
+		
+		<node pkg = "rostopic" name = "world_coord" type = "rostopic" output = "screen" args = "echo /world_coord"/>
+		
+		<node pkg = "rostopic" name = "input_coord" type = "rostopic" output = "screen" args = "echo /input_coord"/>
+		
+		<node pkg="rqt_console" name="rqt_console" type="rqt_console" />
+
+		<node pkg="rqt_graph" name="rqt_graph" type="rqt_graph" />
+
+	</group>
+
+</launch>

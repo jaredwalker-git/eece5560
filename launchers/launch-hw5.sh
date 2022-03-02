@@ -1,6 +1,6 @@
 #!/bin/bash
 
-HW_PACKAGE="homework5"
+HW_PACKAGE="first_ros_package"
 HW_LAUNCH="hw5.launch"
 
 source /environment.sh
