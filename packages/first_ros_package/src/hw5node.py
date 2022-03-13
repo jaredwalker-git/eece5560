@@ -15,9 +15,9 @@ class Locator:
         #initialize class variables for coordinate translations\
         self.scalars = np.array([0, 0, 1])
         self.sensorRobot = np.matrix([[-1],[0]]) #sensor relative robot 
-        self.sensorRot = np.matrix([[np.cos(180), -np.sin(180)],[np.sin(180), np.cos(180)]])
+        self.sensorRot = np.matrix([[np.cos(3.1419), -np.sin(3.1419)],[np.sin(3.1419), np.cos(3.1419)]])
         self.robotWorld = np.matrix([[3],[2]]) #robot relative world 
-        self.robotRot = np.matrix([[np.cos(135), -np.sin(135)],[np.sin(135),np.cos(135)]])
+        self.robotRot = np.matrix([[np.cos(2.356), -np.sin(2.356)],[np.sin(2.356),np.cos(2.356)]])
         self.transSensor = np.append(self.sensorRot, self.sensorRobot, axis = 1) #trans sensor to robot
         self.transSensor = np.append(self.transSensor, self.scalars.reshape(1,3), axis = 0)
         self.transRobot = np.append(self.robotRot, self.robotWorld, axis = 1)
