@@ -32,3 +32,4 @@ if __name__=="__main__":
     rospy.init_node("image_flipper", anonymous=True)
     img_flip = ImageFlipper()
     rospy.spin()
+    

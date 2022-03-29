@@ -1,0 +1,20 @@
+<launch>
+
+  <group ns="image_process_pkg">
+  
+    <node pkg="rqt_image_view" type="rqt_image_view" name="image_view_cropped" args="/image_cropped"/>
+  
+    <node pkg="rqt_image_view" type="rqt_image_view" name="image_view_white" args="/image_white"/>
+
+    <node pkg="rqt_image_view" type="rqt_image_view" name="image_view_yellow" args="/image_yellow"/>
+  
+    <node pkg="image_process_pkg" name="hw7node" type="hw7node.py"/>
+  
+  </group>
+  
+  <node name="image_publisher" pkg="image_processing_hw" type="image_pub_all.py"/>
+  
+</launch>
+  
+  
+    
