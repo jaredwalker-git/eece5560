@@ -1,0 +1,16 @@
+<launch>
+  <param name="controller_ready" value="false" type="str"/>
+  <param name="/k_p" type="double" value="0.7"/>
+  <param name="/k_i" type="double" value="0.01"/>
+  <param name="/k_d" type="double" value="1"/>
+  <group ns="pid">
+    
+    <node pkg ="pid" name="hw9node" type="hw9node.py"/>
+    
+    <node pkg ="pid" name="pid" type="pid.py"/>
+    
+  </group>
+  
+  <include file="eece5560/packages/controls_hw/launch/start_dynamics.launch"/>
+  
+</launch>
