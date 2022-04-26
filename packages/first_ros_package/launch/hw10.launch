@@ -1,0 +1,12 @@
+<launch>
+
+  <include file="eece5560/packages/example_service/launch/fibonacci.launch"/>
+  <include file="eece5560/packages/example_action_server/launch/fibonacci.launch"/>
+  
+  <node pkg ="rqt_console" name ="rqt_console" type ="rqt_console"/>
+  <group ns="first_ros_package">
+    <node pkg ="first_ros_package" name="hw10node" type="hw10node.py"/>
+  </group>
+</launch>
+
+
